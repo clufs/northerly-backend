@@ -1,4 +1,4 @@
-# **Northerly Backend**
+# **Northerly Backend (Work In Progress)** 
 
 ## **Motivacion**
 Junto a mi familia tenemos un emprendimiento de articulos destinados al turismo. Nos surgio la necesidad de tener un control mas exacto de cada **materia prima** para poder hacer compras y proyectar las futuras compras.
