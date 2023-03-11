@@ -39,7 +39,7 @@ export class ProductService {
       
       const productToSend:ProductToShow = {
         ...rest,
-        priceToSell,
+        priceToSell: +priceToSell,
         totalPrice,
         profits: priceToSell - totalPrice
       };
