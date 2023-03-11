@@ -22,4 +22,13 @@ import { ProductModule } from './product/product.module';
     ProductModule,
   ],
 })
-export class AppModule {}
+export class AppModule {
+  constructor(){
+    console.log("STATE", process.env.STATE);
+    console.log("host", process.env.DB_HOST);
+    console.log("port", +process.env.DB_PORT);
+    console.log("database", process.env.DB_NAME);
+    console.log("username", process.env.DB_USERNAME);
+    console.log("password", process.env.DB_PASSWORD);
+  }
+}
