@@ -9,6 +9,7 @@ import { ProductModule } from './product/product.module';
     ConfigModule.forRoot(),
     TypeOrmModule.forRoot({
       type: 'postgres',
+      ssl: (process.env.STATE === 'prod') ? {rejectUnauthorized: false, sslmode: 'require'}: false as any,
       host: process.env.DB_HOST,
       port: +process.env.DB_PORT,
       database: process.env.DB_NAME,
