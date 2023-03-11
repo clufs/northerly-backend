@@ -10,7 +10,7 @@ export class Product {
   @Column('text',{unique: true})
   name: string;
 
-  @Column('numeric')
+  @Column()
   priceToSell: number;
 
   @Column('text',{array: true})

@@ -10,7 +10,7 @@ export class RawMaterial {
   @Column('text',{unique: true})
   name: string;
 
-  @Column('numeric', {
+  @Column({
     default: 0,
   })
   priceToBuy: number;
@@ -22,7 +22,7 @@ export class RawMaterial {
   )
   sizes?: Sizes[];
 
-  @Column('numeric',{nullable: true})
+  @Column({nullable: true})
   stock?: number;
 
   @Column('boolean', {default: true})
