@@ -46,7 +46,7 @@ export class RawMaterialService {
   }
 
   async findOne(id: string):Promise<RawMaterial> {
-    return this.rawMaterialRepository.findOne(id, {relations : ['sizes']},);
+    return this.rawMaterialRepository.findOneBy({id})
   }
 
   async update(id: string, updateRawMaterialDto: UpdateRawMaterialDto):Promise<RawMaterial> {

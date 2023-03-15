@@ -7,7 +7,7 @@ export class Sizes{
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column()
+  @Column('text')
   size: string;
 
   @Column('numeric', {
