@@ -12,6 +12,7 @@ import { CreateRawMaterialDto } from './dto/create-raw_material.dto';
 import { UpdateRawMaterialDto } from './dto/update-raw_material.dto';
 import { RawMaterial } from './entities/raw_material.entity';
 import { Sizes } from './entities/sizes.entity';
+import { UpdateSizesDto } from './dto/Sizes/update-size.dto';
 
 @Controller('raw-material')
 export class RawMaterialController {
@@ -53,4 +54,14 @@ export class RawMaterialController {
   async getOneSize(@Param('id') id: string): Promise<Sizes>{
     return this.rawMaterialService.findOneSize(id);
   }
+
+  @Patch('/size/:id')
+  async updateSize(
+    @Param('id') id: string,
+    @Body() updateSizeDto: UpdateSizesDto, 
+  ): Promise<Sizes>{
+    return this.rawMaterialService.updateSizeDetails(id, updateSizeDto);
+  }
+
 }
+

@@ -10,7 +10,7 @@ export class Sizes{
   @Column('text')
   size: string;
 
-  @Column('numeric', {
+  @Column({
     default: 0,
   })
   stock?: number;
